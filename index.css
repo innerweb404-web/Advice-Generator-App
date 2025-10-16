@@ -141,6 +141,7 @@ header h1 {
 }
 
 footer {
+  flex:0;
   text-align: center;
   color: hsl(193, 38%, 86%);
   font-family: "Manrope", sans-serif;
