@@ -5,7 +5,10 @@
   margin: 0;
   padding: 0;
 }
-
+body,
+html{
+  height:100%;
+}
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -141,12 +144,11 @@ header h1 {
 }
 
 footer {
-  flex:0;
   text-align: center;
   color: hsl(193, 38%, 86%);
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding: 1.5rem 0;
   width: 95%;
   background-color: hsl(217, 19%, 24%);
