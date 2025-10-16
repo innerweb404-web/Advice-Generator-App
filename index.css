@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1rem;
+    max-width: 100%;
+    height: 100vh;
+    background-color:hsl(218, 23%, 16%);
+}
+
+h1,p{
+    font-family:a "Manrope", sans-serif;
+}
+header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 1rem 0 1rem;
+  overflow: hidden; 
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 5px;
+  width: 0;
+  background-color: hsl(150, 100%, 66%);
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px hsl(150, 100%, 66%);
+  animation: borderExpandGlow 2.8s ease-in-out forwards infinite;
+}
+
+@keyframes borderExpandGlow {
+  0% {
+    width: 0;
+    box-shadow: none;
+  }
+  40% {
+    width: 50%;
+    box-shadow: 0 0 30px hsl(150, 100%, 66%);
+  }
+  80% {
+    width: 100%;
+    opacity: 1;
+    box-shadow: 0 0 10px hsl(150, 100%, 66%);
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+header h1 {
+  color: hsl(150, 100%, 66%);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+.container{
+    position: relative;
+}
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    max-width: 500px;
+    padding: 4rem 1.2rem;
+    background-color: hsl(217, 19%, 24%);
+    color: white;
+    border-radius: 1rem;
+}
+
+.hero .advice-id{
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 4px;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+.advice-section{
+    text-align: center;
+}
+.advice{
+    text-wrap: none;
+    font-size: 1.8rem;
+    color: hsl(193, 38%, 86%);
+    font-weight: 900;
+}
+
+.img-fig{
+    width: 100%;
+    height:1rem;
+}
+
+.img-fig img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.icon-dice{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom:-15%;
+    height: 4rem;
+    width: 4rem;
+    transition: box-shadow 0.5s ease
+}
+.icon-dice:active{
+    box-shadow: 0 0 50px -1px hsl(150, 100%, 66%);
+}
+.icon-dice img{
+    object-fit: cover;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    width: 95%;
+    background-color: hsl(217, 19%, 24%);
+    border-top: 2px solid hsl(150, 100%, 66%);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+footer p {
+  letter-spacing: 0.5px;
+}
