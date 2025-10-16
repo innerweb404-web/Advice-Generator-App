@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [Add your Frontend Mentor solution link here](#)
-- **Live Site URL:** [Add your live demo URL here](#)
+- **Solution URL:** https://github.com/innerweb404-web/Advice-Generator-App.git
+- **Live Site URL:**https://innerweb404-web.github.io/Advice-Generator-App/
 
 ---
 
@@ -92,5 +92,5 @@ In future projects, I’d like to:
 
 ### Author
 
-- Frontend Mentor – [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter – [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor – [@yourusername](https://www.frontendmentor.io/profile/@innerweb404-web)
+- Twitter – [@yourusername](https://www.twitter.com/@bightWeb_3)
