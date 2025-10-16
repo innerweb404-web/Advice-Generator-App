@@ -1,6 +1,9 @@
-# Frontend Mentor - Advice generator app solution
+# Frontend Mentor - Advice Generator App Solution
 
-This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is my solution to the [Advice Generator App challenge](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db) on Frontend Mentor.  
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+---
 
 ## Table of contents
 
@@ -14,9 +17,8 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+---
 
 ## Overview
 
@@ -24,89 +26,71 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Generate a new piece of advice by clicking the dice icon
+- View the optimal layout for the app depending on their device's screen size  
+- See hover and active states for the dice button  
+- Generate a new piece of advice by clicking the dice icon (fetched from an API)
+
+---
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Advice Generator App Screenshot](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+---
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- **Solution URL:** [Add your Frontend Mentor solution link here](#)
+- **Live Site URL:** [Add your live demo URL here](#)
+
+---
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Semantic **HTML5** markup  
+- **CSS3** (Flexbox, transitions, glow animation effects)  
+- **Vanilla JavaScript (ES6)** — for fetching advice from the [Advice Slip API](https://api.adviceslip.com/advice)  
+- **Mobile-first workflow**
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+---
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project helped me understand how to:
 
-To see how you can add code snippets, see below:
+- Fetch and display data from a public API using `fetch()`  
+- Position elements with `absolute` and `transform` to align icons perfectly  
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Here’s a snippet from my JavaScript:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const adviceNum = document.querySelector(".num");
+const adviceText = document.querySelector(".advice");
+const dice = document.querySelector(".icon-dice");
+
+async function getAdvice() {
+  const res = await fetch("https://api.adviceslip.com/advice");
+  const data = await res.json();
+  adviceNum.textContent = data.slip.id;
+  adviceText.textContent = `"${data.slip.advice}"`;
 }
+
+dice.addEventListener("click", getAdvice);
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In future projects, I’d like to:
+- Practice using async/await for multiple API requests.
+- Explore how to store previous advice in local storage.
+- Add smooth fade-in animations when new advice appears.
 
 ### Useful resources
+- [MDN Web Docs – Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [Frontend Mentor Challenge Page](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db)
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+### Author
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor – [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter – [@yourusername](https://www.twitter.com/yourusername)
