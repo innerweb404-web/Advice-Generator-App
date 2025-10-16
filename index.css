@@ -165,9 +165,14 @@ footer p {
 
 /* Small phones (max-width: 480px) */
 @media (max-width: 480px) {
+  html, body {
+    height: 100%;
+  }
+
   body {
     padding: 0.5rem;
-    height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   header h1 {
@@ -193,6 +198,7 @@ footer p {
     width: 100%;
   }
 }
+
 
 /* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
