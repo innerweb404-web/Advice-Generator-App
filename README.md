@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Advice Generator App Screenshot](./screenshot.jpg)
+![Advice Generator App Screenshot](./design/desktop.JPG)
 
 ---
 
